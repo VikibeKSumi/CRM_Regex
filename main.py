@@ -1,4 +1,7 @@
 import pandas as pd
+from fastapi import FastAPI
+
+app = FastAPI
 
 # Creating two messy lists that need to be merged
 raw_data = {
@@ -81,3 +84,6 @@ cleaned_df = (
     .pipe(remove_duplicates)
 )
 
+@get("/")
+def read_root():
+    return cleaned_df
