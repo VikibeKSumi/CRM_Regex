@@ -27,7 +27,7 @@ jobs:
           context: .
           push: true
           # REPLACE 'your-username' below with your actual Docker Hub username!
-          tags: ${{ secrets.DOCKER_USERNAME }}/llmops-gateway:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/CRM_Regex:latest
         
         # 4. Poke Render to tell it to update
       - name: Trigger Render Deployment
